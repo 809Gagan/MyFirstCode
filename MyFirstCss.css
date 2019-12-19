@@ -1,73 +1,160 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box; 
-}
-body{
-    border: 2px solid rgba(0, 0, 0, 0.38);
-    border-radius: 40px;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(0, 255, 255, 0.19);
-}
-.header {
-    position: relative;
-    height: 95vh;
-    background-image:linear-gradient(to right bottom,rgba(255, 0, 0, 0.84),rgba(0, 0, 255, 0.75)),url(SAVE_20190818_195901.jpg);
-    background-size: cover; 
-    clip-path: polygon( 50% 0,75% 50%,50% 100%,25% 50%);
-    animation-name: change;
-    animation-duration: 2s;
-}
-
-.inbox {
-    position: absolute;
-    top:40%;
-    left: 53%;
-    transform: translate(-50%,-25%);
-    font-size: 10px;
-    width:800px;
-    height: 400px;
-    padding: 80px 0 0 130px;
-    
-}
-
-.t1 {
-    display: block;
-    font-size:60px;
-    font-weight: 400;
-    animation-name: shift;
-}
-
-.h {
-    color: aliceblue;
-    text-transform: uppercase;
-}
-
-.t2 {
-    display: block
-    
-}
-@keyframes change
+.p1
 {
+    color: rgb(157, 0, 255);
+    letter-spacing: 2px;
+    text-shadow: 3px 3px black;
+    font-size: 55px;
+    font-family: 'Creepster', cursive;
+    
+}
+body
+{
+    height: 200%;
+    width: 100%;
+    padding:0px;
+    margin: 0px;
+    background-color: rgba(234, 198, 0, 0.56);
+}
+.logo {
+    z-index: 1;
+    height:200px;
+    width: 240px;
+    position: absolute;
+    left: -200px;
+    top: -100px;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(58, 255, 65, 0.19);
+    border-width: 10px;
+    border-radius: 10000px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    transform: rotate(0deg);
+    animation-name: balljump;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    background-image: linear-gradient(rgba(53, 10, 65, 0.49),white);
+    
+    
+}
+.main
+{
+    z-index: 0;
+    height:90vh;
+    position: relative;
+    width: 65%;
+    padding: 20px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(58, 255, 65, 0.19);
+    margin-top: 400px;
+    margin-left: 310px;
+    border-radius: 100px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: rgba(244, 18, 209, 0.28);
+    animation-name: edge;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    
+    
+}
+@keyframes balljump
+{
+    0%
+    {
+        left: -15px;
+        top: -260px;
+        border-radius: 0px;
+    }
+    25%
+    {
+        
+        border-radius: 1000px;
+    }
+    
+    50%
+    {
+        top: -260px;
+        left: 1025px;
+        border-radius: 0px;
+    }
+    75%
+    {
+        
+        border-radius: 1000px;
+    }
     100%
     {
-        clip-path: circle(30% at 50% 50%);
-    }
-    
-    10%
-    {
-            clip-path: circle(0px at 50% 50%);
-    }
-    0%
-    {
-        clip-path: polygon( 50% 0,75% 50%,50% 100%,25% 50%);
-    }
+        left: -15px;
+        top: -260px;
+        border-radius: 0px;
+        
+    }   
 }
-@keyframes shift
+.table
+{
+    
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 1050px;
+    height: 500px;
+    padding: 30px;
+    
+}
+.data
+{
+    width: 25%;
+    height:20%;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color:rgba(255, 160, 7, 0.38);
+    background-color: aliceblue;
+    text-align:center;
+}
+.anchor
+{
+    width: 1290px;
+    height: 70px;
+    background-color: ;
+    border-width: 10px;
+    border-color:rgba(244, 18, 209, 0.28);
+    font-size: 35px;
+    border-style: solid;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 320px;
+    margin-bottom: 50px;
+}
+@keyframes edge
 {
     0%
     {
-        transform: scale(59px);
+        border-radius: 0px;
+        background-color: rgba(60, 255, 52, 0.25);
     }
+    50%
+    {
+        border-radius:100px;
+    }
+    100%
+    {
+        border-radius:0px;
+         background-color: rgba(60, 255, 52, 0.28);
+    }
+}
+#hello
+{
+    font-size: 50px;
+    word-spacing: 10px;
+    letter-spacing: 2PX;
+    font-family: 'Nosifer', cursive;   
+}
+.data:hover
+{
+    width: 150px;
+    height:150px;
 }
